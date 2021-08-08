@@ -1,0 +1,30 @@
+{%extends 'users/userbase.html'%}
+{%block contents%}
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <p>
+              This framework integrates churn prediction and
+customer segmentation process to provide telco operators with a complete churn analysis to better manage
+customer churn. Three datasets are used in the experiments with six machine learning Classifiers. First,
+the churn status of the customers is predicted using multiple machine learning Classifiers. Synthetic Minority
+Oversampling Technique (SMOTE) is applied to the training set to deal with the problems with imbalanced
+datasets.
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Dataset 1 is a sample dataset from IBM used to predict customer churn status to develop customer retention programs</li>
+              <li><i class="ri-check-double-line"></i> Dataset 2 was released from the latest Kaggle telco customer churn prediction competition</li>
+              <li><i class="ri-check-double-line"></i> Dataset 3 is called Cell2Cell provided by Teradata centre for customer relationship management at Duke University</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              Accuracy, Precision, Recall, F1-score and AUC are measured to assess the performance of models. Accuracy refers to the ratio of the number of samples that the model predicts correctly to the total number of samples. Precision indicates the ratio of truly positive samples among the samples predicted to be positive. Recall represents how many positive examples in the actual sample are predicted correctly, while Classifiers represents how many negative examples in the actual sample are predicted correctly..
+            </p>
+
+          </div>
+
+        </div>
+
+{%endblock%}

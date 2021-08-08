@@ -1,0 +1,73 @@
+{%extends 'users/userbase.html'%}
+{%block contents%}
+
+        <div class="row content">
+            <h3>Dataset Two Results</h3>
+            <table border="2px" class="table table-hover">
+                    <thead>
+                    <tr class="table-danger">
+                        <th scope="col">S.No</th>
+                        <th scope="col">Algorithm</th>
+                        <th scope="col">Accuracy</th>
+                        <th scope="col">Precision</th>
+                        <th scope="col">Recall</th>
+                        <th scope="col">F1Score</th>
+                        <th scope="col">ROC</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr scope="row" style="color: BLUE; background-color:White">
+                        <td>1</td>
+                        <td>Logistic Regression</td>
+                        <td>{{dict_lg.lg_accuracy}}</td>
+                        <td>{{dict_lg.lg_precision}}</td>
+                        <td>{{dict_lg.lg_recall}}</td>
+                        <td>{{dict_lg.lg_f1score}}</td>
+                        <td>{{dict_lg.lg_roc}}</td>
+                    </tr>
+                    <tr scope="row" style="color: BLUE; background-color:White">
+                        <td>2</td>
+                        <td>Decision Tree</td>
+                        <td>{{dict_dt.dt_accuracy}}</td>
+                        <td>{{dict_dt.dt_precision}}</td>
+                        <td>{{dict_dt.dt_recall}}</td>
+                        <td>{{dict_dt.dt_f1score}}</td>
+                        <td>{{dict_dt.dt_roc}}</td>
+                    </tr>
+                    <tr scope="row" style="color: BLUE; background-color:White">
+                        <td>3</td>
+                        <td>Random Forest</td>
+                        <td>{{dict_rf.rf_accuracy}}</td>
+                        <td>{{dict_rf.rf_precision}}</td>
+                        <td>{{dict_rf.rf_recall}}</td>
+                        <td>{{dict_rf.rf_f1score}}</td>
+                        <td>{{dict_rf.rf_roc}}</td>
+                    </tr>
+                    <tr scope="row" style="color: BLUE; background-color:White">
+                        <td>4</td>
+                        <td>Ada Boost</td>
+                        <td>{{dict_ada.ada_accuracy}}</td>
+                        <td>{{dict_ada.ada_precision}}</td>
+                        <td>{{dict_ada.ada_recall}}</td>
+                        <td>{{dict_ada.ada_f1score}}</td>
+                        <td>{{dict_ada.ada_roc}}</td>
+                    </tr>
+                    <tr scope="row" style="color: BLUE; background-color:White">
+                        <td>5</td>
+                        <td>Multi Layer Perceptron</td>
+                        <td>{{dict_mlp.mlp_accuracy}}</td>
+                        <td>{{dict_mlp.mlp_precision}}</td>
+                        <td>{{dict_mlp.mlp_recall}}</td>
+                        <td>{{dict_mlp.mlp_f1score}}</td>
+                        <td>{{dict_mlp.mlp_roc}}</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+<h2>View Sample Data</h2>
+          {{df|safe}}
+        </div>
+
+{%endblock%}
